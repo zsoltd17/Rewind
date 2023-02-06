@@ -21,6 +21,15 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="icon" href="img/icon/favicon.ico">
 
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Permanent+Marker&family=Source+Sans+Pro:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- PRISMJS -->
+    <link rel="stylesheet" href="css/prism.css">
+
+    <!-- FONTAWESOME KIT -->
     <script src="https://kit.fontawesome.com/cea2e03a5f.js" crossorigin="anonymous"></script>
 </head>
 
@@ -28,7 +37,7 @@
     <!-- ===== SECTION: NAV ===== -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="img/icon/favicon-32x32.png" height="50px" alt="Zsolt Dzsugan logo"><span>APP Name</span></a>
+            <a class="navbar-brand" href="#"><img src="img/icon/favicon-32x32.png" height="50px" alt="Zsolt Dzsugan logo"><span>REWIND</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -60,14 +69,45 @@
             <h2 class="code-title">The Code</h2>
             <div class="row row-cols-1 row-cols-lg-2">
                 <div class="col-lg-8">
-                    <pre class="line-numbers">
-                        <code class="language-javascript">
-                            // Call function
-                            function HelloWorld() {
-                                alert("Hello World");
-                            }
-                        </code>
-                    </pre>
+<pre class="line-numbers">
+<code class="language-javascript">// Get elements from page
+    const btnRun = document.querySelector('#btnSubmit');
+    const result = document.querySelector('#result');
+    const alertMsg = document.querySelector('#alert');
+    
+    // Get String from the page
+    // Controller function
+    function getValue() {
+        alertMsg.classList.add("invisible");
+    
+        let inputString = document.querySelector('#inputString').value;
+        let revString = reverseString(inputString);
+    
+        displayString(revString);
+    }
+    // Reverse the string
+    // Logic function
+    function reverseString(inputString) {
+        let revString = [];
+    
+        // Reverse a string using a for loop
+        for (let i = inputString.length - 1; i >= 0; i--) {
+            revString += inputString[i];
+        }
+    
+        return revString;
+    }
+    // Display reversed string to user
+    // Display function
+    function displayString(revString) {
+        result.innerHTML = `${revString}`;
+        alertMsg.classList.remove("invisible");
+    }
+    
+btnRun.addEventListener('click', getValue);
+
+</code>
+</pre>
                 </div>
                 <div class="col-lg-4">
                     <p>The Code is structured in one function.</p>

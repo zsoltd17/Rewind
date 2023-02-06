@@ -18,6 +18,12 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="icon" href="img/icon/favicon.ico">
 
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Permanent+Marker&family=Source+Sans+Pro:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- FONTAWESOME KIT -->
     <script src="https://kit.fontawesome.com/cea2e03a5f.js" crossorigin="anonymous"></script>
 </head>
 
@@ -25,7 +31,7 @@
     <!-- ===== SECTION: NAV ===== -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="img/icon/favicon-32x32.png" height="50px" alt="Zsolt Dzsugan logo"><span>APP Name</span></a>
+            <a class="navbar-brand" href="#"><img src="img/icon/favicon-32x32.png" height="50px" alt="Zsolt Dzsugan logo"><span>Rewind</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -52,8 +58,34 @@
         </div>
     </nav>
     <!-- ===== SECTION: MAIN ===== -->
-    <main class="flex-shrink-0">
-        <div class="container"></div>
+    <main class="flex-shrink-0 my-5 py-5">
+        <div class="container py-4 px-5">
+            <div class="row row-cols-1 row-cols-lg-2">
+                <div class="col-lg-4 col h-border">
+                    <h2>REWIND: A Coding Project</h2>
+                    <h6>There and back again. A javascript coding exrcise using arrays. Write a program that displays a string in reverse.</h6>
+                    <h3 class="mt-5 h3-border-bottom">Instruction</h3>
+                    <p>Enter a string. Press the button and the value will appear.</p>
+                </div>
+                <div class="col-lg-8 col">
+                    <h5>Enter A String</h5>
+                    <form action="" class="row gx-3 gy-2">
+                        <div class="col">
+                            <input type="text" id="inputString" class="form-control" placeholder="Enter a string" aria-label="Enter a string">
+                        </div>
+                        <div class="col-12 col d-flex justify-content-end">
+                            <button type="button" id="btnSubmit" class="btn btn-lg">Run</button>
+                        </div>
+                        <div class="invisible fade show col-12 col" id="alert" role="alert">
+                            <h4 class="alert-h">Result</h4>
+                            <div class="mb-0" id="result">
+                                <!-- Insert The Result Here -->
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </main>
     <!-- ===== SECTION: FOOTER ===== -->
     <footer class="footer mt-auto py-2 sticky-footer">
